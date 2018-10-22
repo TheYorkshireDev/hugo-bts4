@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<div style="margin:25px;">
+        <h1>{{.Title}}</h1>
+        <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+        <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
+
+        <h2>Content</h2>
+        <div>{{.Content}}</div>
+   </div>
+
+{{ end }}

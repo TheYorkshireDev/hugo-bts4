@@ -1,0 +1,18 @@
+name = "Hugo Zero"
+license = "MIT"
+licenselink = "https://github.com/TheYorkshireDev/hugo-zeromaster/LICENSE"
+description = "Minimalistic Website Theme"
+homepage = "https://github.com/TheYorkshireDev/hugo-zero"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Steven Cooney (TheYorkshireDev)"
+  homepage = "https://github.com/TheYorkshireDev"
+
+# Based Upon
+[original]
+  name = "Robin Wieruch"
+  homepage = "https://github.com/rwieruch"
+  repo = "https://github.com/rwieruch/hugo-minimal"
