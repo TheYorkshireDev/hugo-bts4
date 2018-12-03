@@ -1,12 +1,12 @@
 {{ define "main" }}
-<!-- Blog Post Layout -->
+<!-- For Traditional Pages -->
 
 <div style="margin:25px;">
     <h1>{{.Title}}</h1>
     <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
     <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
 
-    <h2>Post</h2>
+    <h2>Traditinal Page</h2>
     <div>{{.Content}}</div>
 </div>
 
