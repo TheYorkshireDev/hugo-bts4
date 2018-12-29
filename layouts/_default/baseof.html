@@ -4,16 +4,17 @@
 {{ partial "head.html" . }}
 
 <body>
-    {{ partial "header.html" . }}
+  {{ partial "header.html" . }}
 
-    <div id="content">
-        <hr>
-        {{ block "main" . }}{{ end }}
-        <hr>
-    </div>
-    
-    {{ partial "footer.html" . }}
+  <div id="content">
 
-    {{ partial "scripts.html" . }}
+    {{ block "main" . }}{{ end }}
+
+    <hr>
+  </div>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "scripts.html" . }}
 </body>
 </html>
