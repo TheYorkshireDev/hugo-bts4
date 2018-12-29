@@ -58,6 +58,22 @@ description: "Example article description"
 ---
 ```
 
+### Settings
+
+#### NavBar Links
+
+To add items to the Navbar you must add `[[params.menu]]` items to the `config.toml`, for example to add About and Contact you would add:
+
+```toml
+[[params.menu]]
+    name = "About"
+    url  = "/about"
+
+[[params.menu]]
+    name = "Contact"
+    url  = "/contact"
+```
+
 ## Contributing
 
 Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/TheYorkshireDev/hugo-zero/issues) to let me know or make a contribution directly with a [pull request](https://github.com/TheYorkshireDev/hugo-zero/pulls).
