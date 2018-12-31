@@ -1,0 +1,13 @@
+@import 'mixin-override';
+@import 'nav-override';
+
+a,
+button {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#content {
+  padding-top: 4.5rem;
+}

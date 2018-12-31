@@ -1,0 +1,32 @@
+{
+  "name": "hugo-zero",
+  "version": "1.0.0",
+  "description": "The `hugo-zero` theme is intended for basic websites, blogging or a combination of both. This is different to most Hugo themes which focus solely on blogging.",
+  "main": "hack.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheYorkshireDev/hugo-zero.git"
+  },
+  "author": "TheYorkshireDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheYorkshireDev/hugo-zero/issues"
+  },
+  "homepage": "https://github.com/TheYorkshireDev/hugo-zero#readme",
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "path": "^0.12.7",
+    "style-loader": "^0.23.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {}
+}

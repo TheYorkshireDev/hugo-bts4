@@ -1,0 +1,222 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white: #fff !default;
+$black: #000 !default;
+$accent-border-color: #38bb6c;
+$accent-color: #9fd4b4;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded: true !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 0 !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// $border-width:   1px !default;
+$border-radius:  0 !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-border-radius: $border-radius !default;
+
+// Navbar
+$navbar-padding-y:                   ($spacer / 2) !default;
+$navbar-padding-x:                   $spacer !default;
+$navbar-padding-sm-left:             .9375rem;
+
+$navbar-toggler-padding-y:           .5625rem !default;
+$navbar-toggler-padding-x:           .75rem !default;
+$navbar-toggler-margin-y:            .6875rem;
+$navbar-toggler-margin-right:        .3125rem;
+$navbar-toggler-border-radius:       $btn-border-radius !default;
+$navbar-toggler-icon-dimension:      1.2em;
+
+$navbar-collapse-margin-sm-x:        -.9375rem;
+$navbar-collapse-padding-sm-x:       .9375rem;
+
+$navbar-border-color:              #cccccc;
+$navbar-nav-margin-y:                .65625rem;
+
+$navbar-nav-link-padding-above-sm-x: .9375rem;
+$navbar-nav-link-padding-above-sm-y: 1.3125rem;
+$navbar-nav-link-padding-below-sm-x: .9375rem;
+$navbar-nav-link-padding-below-sm-y: .625rem;
+$navbar-nav-link-background-color:   .625rem;
+
+$navbar-light-color:               #555555 !default;
+$navbar-light-hover-color:         #555555 !default;
+$navbar-light-active-color:        #555555 !default;
+$navbar-light-disabled-color:      #555555 !default;
+
+$navbar-light-brand-color:           $navbar-light-active-color !default;
+$navbar-light-brand-hover-color:     $navbar-light-active-color !default;
+
+// Navbar
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  background-color: $white;
+  box-shadow: 0 0 5px $navbar-border-color;
+  padding: $navbar-padding-y $navbar-padding-x;
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properties so that content nested within behave properly.
+  >.container,
+  >.container-fluid {
+    @include respond-below(sm) {
+        max-width: none;
+      }
+  }
+}
+
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+.navbar-brand {
+  margin-right: $navbar-padding-x;
+
+  @include respond-below(sm) {
+    padding-left: $navbar-padding-sm-left;
+  }
+}
+
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+.navbar-nav {
+  @include respond-below(sm) {
+    margin-top: $navbar-nav-margin-y;
+    margin-bottom: $navbar-nav-margin-y;
+  }
+}
+
+// Responsive navbar
+//
+// Custom styles for responsive collapsing and toggling of navbar contents.
+// Powered by the collapse Bootstrap JavaScript plugin.
+
+// When collapsed, prevent the toggleable navbar contents from appearing in
+// the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
+// on the `.navbar` parent.
+.navbar-collapse {
+  // For always expanded or extra full navbars, ensure content aligns itself
+  // properly vertically. Can be easily overridden with flex utilities.
+  align-items: center;
+
+  @include respond-below(sm) {
+    border-top: 1px solid $navbar-border-color;
+    padding-left: $navbar-collapse-padding-sm-x;
+    padding-right: $navbar-collapse-padding-sm-x;
+    margin-left: $navbar-collapse-margin-sm-x;
+    margin-right: $navbar-collapse-margin-sm-x;
+  }
+}
+
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler {
+  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  margin-top: $navbar-toggler-margin-y;
+  margin-bottom: $navbar-toggler-margin-y;
+  margin-right: $navbar-toggler-margin-right;
+
+  @include border-radius($navbar-toggler-border-radius);
+}
+
+// Keep as a separate element so folks can easily override it with another icon
+// or image file as needed.
+.navbar-toggler-icon {
+  width: $navbar-toggler-icon-dimension;
+  height: $navbar-toggler-icon-dimension;
+}
+
+// Navbar themes
+//
+// Styles for switching between navbars with light or dark background.
+// Dark links against a light background
+.navbar-light {
+  .navbar-brand {
+    color: $navbar-light-brand-color;
+    @include hover-focus {
+      color: $navbar-light-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .135em;
+      line-height: 1.25rem;
+      border-top: solid 5px transparent;
+      @include hover-focus {
+        color: $navbar-light-hover-color;
+        background-color: $accent-color;
+        border-top: solid 5px $accent-border-color;
+        @include respond-below(sm) {
+            border-top: solid 5px transparent;
+          }
+      }
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+
+      @include respond-above(sm) {
+        padding-left: $navbar-nav-link-padding-above-sm-x;
+        padding-right: $navbar-nav-link-padding-above-sm-x;
+        padding-top: $navbar-nav-link-padding-above-sm-y;
+        padding-bottom: $navbar-nav-link-padding-above-sm-y;
+      }
+
+      @include respond-below(sm) {
+        border-top: solid 5px transparent;
+        padding-top: $navbar-nav-link-padding-below-sm-y;
+        padding-bottom: $navbar-nav-link-padding-below-sm-y;
+        padding-left: $navbar-nav-link-padding-below-sm-x;
+        padding-right: $navbar-nav-link-padding-below-sm-x;
+      }
+
+    }
+    .show>.nav-link,
+    .active>.nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+  .navbar-toggler {
+    color: $navbar-light-color;
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+    a {
+      color: $navbar-light-active-color;
+      @include hover-focus {
+        color: $navbar-light-active-color;
+      }
+    }
+  }
+}
