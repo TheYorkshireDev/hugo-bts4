@@ -74,6 +74,46 @@ To add items to the Navbar you must add `[[params.menu]]` items to the `config.t
     url  = "/contact"
 ```
 
+#### Footer Links
+
+The footer is split into three sections; `info`, `social`, `quicklinks`.
+
+All items on the footer are detailed under `[params.footer]` within the `config.toml`.
+
+The `info` section is designed to detail the website author, an example is below:
+```toml
+[params.footer]
+    info = "© Bill Smith"
+```
+
+The `social` section displays social media icons which will link to the relevant websites/accounts. The first attribute specifies the font awesome icon classes and the second attribute is the url to the external website, an example is below:
+```toml
+[params.footer]
+    [[params.footer.social]]
+      icon = "fab fa-twitter"
+      link = "https://twitter.com"
+
+    [[params.footer.social]]
+      icon = "fab fa-instagram"
+      link = "https://www.instagram.com"
+
+    [[params.footer.social]]
+        icon = "fas fa-envelope"
+        link = "mailto:blah@gmail.com"
+```
+
+The `quicklinks` section displays a list of links which will be displayed on the footer, an example of adding two links is:
+```toml
+[params.footer]
+    [[params.footer.quicklinks]]
+      text = "Legal Notice"
+      link = "/legal"
+
+    [[params.footer.quicklinks]]
+      text = "Credits"
+      link = "/credits"
+```
+
 ## Contributing
 
 Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/TheYorkshireDev/hugo-zero/issues) to let me know or make a contribution directly with a [pull request](https://github.com/TheYorkshireDev/hugo-zero/pulls).
