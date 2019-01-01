@@ -1,14 +1,8 @@
 {{ define "main" }}
 <!-- For Traditional Pages -->
 
-<div style="margin:25px;">
-  <h1>{{.Title}}</h1>
-  <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-  <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
+<h1>{{.Title}}</h1>
 
-  <h2>Traditional Page</h2>
-  <div>{{.Content}}</div>
-
-</div>
+<div>{{.Content}}</div>
 
 {{ end }}

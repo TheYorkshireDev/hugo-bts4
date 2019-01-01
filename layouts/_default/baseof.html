@@ -6,12 +6,10 @@
 <body class="d-flex flex-column h-100">
   {{ partial "header.html" . }}
 
-  <main role="main" class="flex-shrink-0">
-    <div id="content">
+  <main role="main" class="flex-shrink-0 container">
 
       {{ block "main" . }}{{ end }}
 
-    </div>
   </main>
 
   {{ partial "footer.html" . }}
