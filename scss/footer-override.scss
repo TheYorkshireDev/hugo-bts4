@@ -1,0 +1,33 @@
+$dark-grey: #333;
+$light-grey: #ccc;
+
+$footer-colour: $dark-grey;
+$footer-text-colour: $light-grey;
+
+.footer {
+  background: $footer-colour;
+  color: $footer-text-colour;
+  padding: 15px 0;
+  font-size: 12px;
+  line-height: 28px;
+
+  a {
+    color: $footer-text-colour;
+  }
+
+  .footer-social-buttons {
+    font-size: 20px;
+  }
+
+  @include respond-below(sm) {
+    ul {
+      margin-bottom: 0;
+    }
+
+    .footer-links li {
+      display: list-item;
+      text-align: right;
+      margin-right: 0;
+    }
+  }
+}

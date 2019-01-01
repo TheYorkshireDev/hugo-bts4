@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
 
 {{ partial "head.html" . }}
 
-<body>
+<body class="d-flex flex-column h-100">
   {{ partial "header.html" . }}
 
-  <div id="content">
+  <main role="main" class="flex-shrink-0">
+    <div id="content">
 
-    {{ block "main" . }}{{ end }}
+      {{ block "main" . }}{{ end }}
 
-    <hr>
-
-  </div>
+    </div>
+  </main>
 
   {{ partial "footer.html" . }}
 

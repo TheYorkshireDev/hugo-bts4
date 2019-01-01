@@ -91,6 +91,24 @@
     .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
       color: #555555; }
 
+.footer {
+  background: #333;
+  color: #ccc;
+  padding: 15px 0;
+  font-size: 12px;
+  line-height: 28px; }
+  .footer a {
+    color: #ccc; }
+  .footer .footer-social-buttons {
+    font-size: 20px; }
+  @media (max-width: 767px) {
+    .footer ul {
+      margin-bottom: 0; }
+    .footer .footer-links li {
+      display: list-item;
+      text-align: right;
+      margin-right: 0; } }
+
 a,
 button {
   -webkit-transition: all 0.2s ease-out;
