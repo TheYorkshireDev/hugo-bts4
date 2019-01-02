@@ -4,6 +4,22 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Title }} - {{ .Site.Title }}
+    {{ end }}
+  </title>
+
+  {{ if .Site.Author.name }}
+    <meta name="author" content="{{ .Site.Author.name }}" />
+  {{ end }}
+
+  {{ if .Site.Params.Color.accent }}
+    <meta name="theme-color" content="{{ .Site.Params.Color.accent }}"/>
+  {{ end }}
+
   {{ .Hugo.Generator }}
 
   <!-- Bootstrap and Font Awesome CSS -->
@@ -12,8 +28,7 @@
 
   {{ if in (.Site.BaseURL | string) "localhost" }}
     <link href="{{ .Site.BaseURL }}css/bootstrap-overrides.css" rel="stylesheet" id="theme-stylesheet">
-  {{ end }}
-  {{ if not (in (.Site.BaseURL | string) "localhost") }}
+  {{ else }}
     <link href="{{ .Site.BaseURL }}css/bootstrap-overrides.min.css" rel="stylesheet" id="theme-stylesheet">
   {{ end }}
 

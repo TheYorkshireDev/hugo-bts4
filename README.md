@@ -60,6 +60,26 @@ description: "Example article description"
 
 ### Settings
 
+#### Site Author
+
+We should define the website author in the `config.toml` file, that way we can set the `author` meta data in the header.
+
+```
+[author]
+    name = "Bob Smith"
+```
+
+#### Accent Color
+
+When on the website using a mobile device Chrome, Opera and Firefox OS allow you to choose the colour of the browser theme. You can read more about it [here](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/#meta_theme_color_for_chrome_and_opera).
+
+To specify what color the theme should become we can set `[params.color]` in in the `config.toml` file.
+
+```
+[params.color]
+    accent = "#38bb6c"
+```
+
 #### NavBar Links
 
 To add items to the Navbar you must add `[[params.menu]]` items to the `config.toml`, for example to add About and Contact you would add:
