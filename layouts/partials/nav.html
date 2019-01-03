@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-      {{ .Site.Title }}
-      <!-- TODO: Allow for base image instead of text. -->
+      {{ if .Site.Params.navbarLogo }}
+        <img src="{{ .Site.Params.navbarLogo }}" alt="{{ .Site.Params.navbarLogoAlt }}">
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

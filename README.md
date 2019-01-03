@@ -64,7 +64,7 @@ description: "Example article description"
 
 We should define the website author in the `config.toml` file, that way we can set the `author` meta data in the header.
 
-```
+```toml
 [author]
     name = "Bob Smith"
 ```
@@ -75,9 +75,19 @@ When on the website using a mobile device Chrome, Opera and Firefox OS allow you
 
 To specify what color the theme should become we can set `[params.color]` in in the `config.toml` file.
 
-```
+```toml
 [params.color]
     accent = "#38bb6c"
+```
+
+#### NavBar Logo
+
+The NavBar on your website can display either the site title or a logo. By default the site title will be used but if you specify a logo in the `config.toml` that will be displayed instead.
+
+```toml
+[params]
+    navbarLogo = "http://placehold.it/150x50?text=Hugo-Zero"
+    navbarLogoAlt = "Logo for Hugo Zero test website"
 ```
 
 #### NavBar Links
