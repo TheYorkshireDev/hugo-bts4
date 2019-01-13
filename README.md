@@ -104,6 +104,15 @@ To add items to the Navbar you must add `[[params.menu]]` items to the `config.t
     url  = "/contact"
 ```
 
+#### GitHub Links
+
+If the posts are hosted on GitHub (or any other site) you can specify the path to the file allowing others to contribute. Note the path should not include a file, that will be appended automatically.
+
+```toml
+[params.github_contribution]
+    link = "https://github.com/path-to-file/"
+```
+
 #### Footer Links
 
 The footer is split into three sections; `info`, `social`, `quicklinks`.

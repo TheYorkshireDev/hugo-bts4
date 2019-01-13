@@ -1,11 +1,37 @@
 {{ define "main" }}
 <!-- Blog Post Layout -->
+<div class="row justify-content-md-center">
+  <article
+    class="col-md-9"
+    id="blog-post"
+    itemprop="blogPosts"
+    itemscope itemtype="http://schema.org/BlogPosting">
 
-<h1>{{.Title}}</h1>
-<div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-<div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
+    <div itemprop="articleBody">
+      <h1 class="text-center mt-3 mb-3" itemprop="name title">{{ .Title }}</h1>
 
-<h2>Post</h2>
-<div>{{.Content}}</div>
+      <p class="text-muted text-uppercase text-center">
+        {{ if .Date }}
+          <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">
+            {{ .Date.Format "2 January 2006" }}
+          </time>
+        {{ end }}
 
+        {{ if .Site.Params.github_contribution.link }}
+          <br />
+
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{ .Site.Params.github_contribution.link }}{{ .File.LogicalName }}">
+            Edit this Post on GitHub
+          </a>
+        {{ end }}
+      </p>
+
+      {{.Content}}
+    </div>
+
+  </article>
+</div>
 {{ end }}
