@@ -46,7 +46,6 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: #555555;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: .135em;
@@ -108,6 +107,9 @@
       display: list-item;
       text-align: right;
       margin-right: 0; } }
+
+body {
+  font-family: "Helvetica", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
 
 a,
 button {

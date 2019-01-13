@@ -2,6 +2,12 @@
 @import 'nav-override';
 @import 'footer-override';
 
+// Global Settings for the website
+
+body {
+  font-family: "Helvetica", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
 a,
 button {
   -webkit-transition: all 0.2s ease-out;
