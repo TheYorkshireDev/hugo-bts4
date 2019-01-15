@@ -1,3 +1,10 @@
+$white: #fff !default;
+$black: #000 !default;
+$accent-border-color: #38bb6c;
+$accent-color: #9fd4b4;
+$border-color: #cccccc;
+$text-color: #555555;
+
 @import 'mixin-override';
 @import 'nav-override';
 @import 'footer-override';
@@ -6,11 +13,27 @@
 
 body {
   font-family: "Helvetica", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
 }
 
 h1 {
   font-size: 1.875em;
   font-weight: 400;
+}
+
+h2.chapter-header {
+  font-size: 1.5em;
+  border-top: 1px solid #f3f3f3;
+  padding-top: 1.875rem;
+  padding-bottom: 0.625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 a,

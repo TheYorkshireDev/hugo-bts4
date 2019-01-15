@@ -3,13 +3,6 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-// Color system
-
-$white: #fff !default;
-$black: #000 !default;
-$accent-border-color: #38bb6c;
-$accent-color: #9fd4b4;
-
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -52,7 +45,7 @@ $navbar-toggler-icon-dimension:      1.2em;
 $navbar-collapse-margin-sm-x:        -.9375rem;
 $navbar-collapse-padding-sm-x:       .9375rem;
 
-$navbar-border-color:              #cccccc;
+$navbar-border-color:              $border-color;
 $navbar-nav-margin-y:                .65625rem;
 
 $navbar-nav-link-padding-above-sm-x: .9375rem;
@@ -61,10 +54,10 @@ $navbar-nav-link-padding-below-sm-x: .9375rem;
 $navbar-nav-link-padding-below-sm-y: .625rem;
 $navbar-nav-link-background-color:   .625rem;
 
-$navbar-light-color:               #555555 !default;
-$navbar-light-hover-color:         #555555 !default;
-$navbar-light-active-color:        #555555 !default;
-$navbar-light-disabled-color:      #555555 !default;
+$navbar-light-color:               $text-color !default;
+$navbar-light-hover-color:         $navbar-light-color !default;
+$navbar-light-active-color:        $navbar-light-color !default;
+$navbar-light-disabled-color:      $navbar-light-color !default;
 
 $navbar-light-brand-color:           $navbar-light-active-color !default;
 $navbar-light-brand-hover-color:     $navbar-light-active-color !default;
