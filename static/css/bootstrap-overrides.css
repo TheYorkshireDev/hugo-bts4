@@ -129,6 +129,11 @@ h2.chapter-header {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
 
+a, a:hover, a:focus {
+  color: #38bb6c; }
+  a :hover, a:hover :hover, a:focus :hover {
+    text-decoration: underline; }
+
 a,
 button {
   -webkit-transition: all 0.2s ease-out;

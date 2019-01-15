@@ -1,7 +1,7 @@
 $white: #fff !default;
 $black: #000 !default;
-$accent-border-color: #38bb6c;
-$accent-color: #9fd4b4;
+$accent-color: #38bb6c;
+$light-accent-color: #9fd4b4;
 $border-color: #cccccc;
 $text-color: #555555;
 
@@ -34,6 +34,14 @@ h2.chapter-header {
   padding-bottom: 0.625rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+a, a:hover, a:focus {
+  color: #38bb6c;
+
+  :hover {
+    text-decoration: underline;
+  }
 }
 
 a,

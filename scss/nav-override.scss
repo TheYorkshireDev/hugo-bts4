@@ -165,8 +165,8 @@ $navbar-light-brand-hover-color:     $navbar-light-active-color !default;
       border-top: solid 5px transparent;
       @include hover-focus {
         color: $navbar-light-hover-color;
-        background-color: $accent-color;
-        border-top: solid 5px $accent-border-color;
+        background-color: $light-accent-color;
+        border-top: solid 5px $accent-color;
         @include respond-below(sm) {
             border-top: solid 5px transparent;
           }
