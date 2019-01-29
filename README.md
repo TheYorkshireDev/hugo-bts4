@@ -60,6 +60,14 @@ description: "Example article description"
 
 ### Settings
 
+#### Code Syntax Highlighting
+
+If you are going to use code syntax highlighting within the theme it is recommeded to set `pygmentsUseClasses`. The syntax styling was developed with this flag set to true hence there could be unforeseen style issues otherwise.
+
+```toml
+pygmentsUseClasses=true
+```
+
 #### Site Author
 
 We should define the website author in the `config.toml` file, that way we can set the `author` meta data in the header.
