@@ -7,6 +7,7 @@ $text-color: #555555;
 
 @import 'mixin-override';
 @import 'nav-override';
+@import 'code-syntax';
 @import 'footer-override';
 
 // Global Settings for the website
@@ -37,7 +38,7 @@ h2.chapter-header {
 }
 
 a, a:hover, a:focus {
-  color: #38bb6c;
+  color: $accent-color;
 
   :hover {
     text-decoration: underline;
@@ -54,4 +55,71 @@ button {
 main {
   padding-top: 5.5rem;
   padding-bottom: 1rem;
+}
+
+/*
+ * Code Overrides
+ */
+
+$code-font-color: #06b6ef;
+$code-background-color: #2f1e2e;
+
+// Inline Code
+code {
+  padding: 2px 2px;
+  margin: 0 2px;
+  color: $code-font-color;
+  background-color: $code-background-color;
+  border-radius: 4px;
+}
+
+// Code Block Base Formatting
+pre {
+  background-color: $code-background-color;
+  color: $code-font-color;
+  border-left: 5px solid $accent-color;
+  padding: 20px;
+  line-height: 16.25px;
+
+  code {
+    padding: 0;
+    margin: 0;
+    font-size: 90%;
+  }
+}
+
+// Line Highlight Override
+.chroma .hl {
+  background-color: #4f424c;
+}
+
+// Table Layout Code Block
+
+.chroma table.lntable {
+  width: 100%;
+  display: table;
+  margin-bottom: 1rem;
+}
+
+.lntd > pre.chroma {
+  border-left: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.lntable tr:first-child {
+  border-left: 5px solid $accent-color;
+}
+
+.lntable td:first-child {
+  width: 10px;
+
+  .chroma, code, .hl {
+    background-color: $accent-color;
+  }
+
+  pre.chroma {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
