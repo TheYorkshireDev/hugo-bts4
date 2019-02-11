@@ -1,0 +1,18 @@
+h2.chapter-header a {
+  float: right;
+  font-size: 1rem;
+}
+
+h2.chapter-header {
+  font-size: 1.5em;
+  margin-bottom: 1.875rem;
+}
+
+h2.chapter-header::before {
+  display: block;
+  content: " ";
+  margin-top: -3.667em;
+  height: 3.667em;
+  visibility: hidden;
+  pointer-events: none;
+}

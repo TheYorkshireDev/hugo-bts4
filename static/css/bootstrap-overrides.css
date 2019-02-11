@@ -354,6 +354,48 @@
   color: #5bc4bf;
   font-weight: bold; }
 
+code {
+  padding: .125rem .125rem;
+  margin: 0 .125rem;
+  color: #06b6ef;
+  background-color: #2f1e2e;
+  border-radius: .25rem; }
+
+pre {
+  background-color: #2f1e2e;
+  color: #06b6ef;
+  border-left: 5px solid #38bb6c;
+  padding: 1.25rem;
+  line-height: 1.015625rem; }
+  pre code {
+    padding: 0;
+    margin: 0;
+    font-size: 90%; }
+
+.chroma .hl {
+  background-color: #4f424c; }
+
+.chroma table.lntable {
+  width: 100%;
+  display: table;
+  margin-bottom: 1rem; }
+
+.lntd > pre.chroma {
+  border-left: none;
+  margin: 0;
+  padding: 0.625rem; }
+
+.lntable tr:first-child {
+  border-left: 5px solid #38bb6c; }
+
+.lntable td:first-child {
+  width: 0.625rem; }
+  .lntable td:first-child .chroma, .lntable td:first-child code, .lntable td:first-child .hl {
+    background-color: #38bb6c; }
+  .lntable td:first-child pre.chroma {
+    padding-left: 0;
+    padding-right: 0; }
+
 .footer {
   background: #333;
   color: #ccc;
@@ -372,6 +414,22 @@
       text-align: right;
       margin-right: 0; } }
 
+h2.chapter-header a {
+  float: right;
+  font-size: 1rem; }
+
+h2.chapter-header {
+  font-size: 1.5em;
+  margin-bottom: 1.875rem; }
+
+h2.chapter-header::before {
+  display: block;
+  content: " ";
+  margin-top: -3.667em;
+  height: 3.667em;
+  visibility: hidden;
+  pointer-events: none; }
+
 body {
   font-family: "Helvetica", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   line-height: 1.58;
@@ -389,22 +447,6 @@ hr {
   border-top: 1px solid #f3f3f3;
   margin-bottom: 1.875rem; }
 
-h2 a {
-  float: right;
-  font-size: 16px; }
-
-h2.chapter-header {
-  font-size: 1.5em;
-  margin-bottom: 1.875rem; }
-
-h2.chapter-header::before {
-  display: block;
-  content: " ";
-  margin-top: -88px;
-  height: 88px;
-  visibility: hidden;
-  pointer-events: none; }
-
 a, a:hover, a:focus {
   color: #38bb6c; }
   a :hover, a:hover :hover, a:focus :hover {
@@ -419,49 +461,4 @@ button {
 main {
   padding-top: 5.5rem;
   padding-bottom: 1rem; }
-
-/*
- * Code Overrides
- */
-code {
-  padding: 2px 2px;
-  margin: 0 2px;
-  color: #06b6ef;
-  background-color: #2f1e2e;
-  border-radius: 4px; }
-
-pre {
-  background-color: #2f1e2e;
-  color: #06b6ef;
-  border-left: 5px solid #38bb6c;
-  padding: 20px;
-  line-height: 16.25px; }
-  pre code {
-    padding: 0;
-    margin: 0;
-    font-size: 90%; }
-
-.chroma .hl {
-  background-color: #4f424c; }
-
-.chroma table.lntable {
-  width: 100%;
-  display: table;
-  margin-bottom: 1rem; }
-
-.lntd > pre.chroma {
-  border-left: none;
-  margin: 0;
-  padding: 10px; }
-
-.lntable tr:first-child {
-  border-left: 5px solid #38bb6c; }
-
-.lntable td:first-child {
-  width: 10px; }
-  .lntable td:first-child .chroma, .lntable td:first-child code, .lntable td:first-child .hl {
-    background-color: #38bb6c; }
-  .lntable td:first-child pre.chroma {
-    padding-left: 0;
-    padding-right: 0; }
 

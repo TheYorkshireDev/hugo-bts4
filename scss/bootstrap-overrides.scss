@@ -7,11 +7,11 @@ $text-color: #555555;
 
 @import 'mixin-override';
 @import 'nav-override';
-@import 'code-syntax';
+@import 'code-override';
 @import 'footer-override';
+@import 'shortcode-classes';
 
 // Global Settings for the website
-
 body {
   font-family: "Helvetica", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   line-height: 1.58;
@@ -33,25 +33,6 @@ hr {
   margin-bottom: 1.875rem;
 }
 
-h2 a {
-  float: right;
-  font-size: 16px;
-}
-
-h2.chapter-header {
-  font-size: 1.5em;
-  margin-bottom: 1.875rem;
-}
-
-h2.chapter-header::before {
-  display: block;
-  content: " ";
-  margin-top: -88px;
-  height: 88px;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 a, a:hover, a:focus {
   color: $accent-color;
 
@@ -70,71 +51,4 @@ button {
 main {
   padding-top: 5.5rem;
   padding-bottom: 1rem;
-}
-
-/*
- * Code Overrides
- */
-
-$code-font-color: #06b6ef;
-$code-background-color: #2f1e2e;
-
-// Inline Code
-code {
-  padding: 2px 2px;
-  margin: 0 2px;
-  color: $code-font-color;
-  background-color: $code-background-color;
-  border-radius: 4px;
-}
-
-// Code Block Base Formatting
-pre {
-  background-color: $code-background-color;
-  color: $code-font-color;
-  border-left: 5px solid $accent-color;
-  padding: 20px;
-  line-height: 16.25px;
-
-  code {
-    padding: 0;
-    margin: 0;
-    font-size: 90%;
-  }
-}
-
-// Line Highlight Override
-.chroma .hl {
-  background-color: #4f424c;
-}
-
-// Table Layout Code Block
-
-.chroma table.lntable {
-  width: 100%;
-  display: table;
-  margin-bottom: 1rem;
-}
-
-.lntd > pre.chroma {
-  border-left: none;
-  margin: 0;
-  padding: 10px;
-}
-
-.lntable tr:first-child {
-  border-left: 5px solid $accent-color;
-}
-
-.lntable td:first-child {
-  width: 10px;
-
-  .chroma, code, .hl {
-    background-color: $accent-color;
-  }
-
-  pre.chroma {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }

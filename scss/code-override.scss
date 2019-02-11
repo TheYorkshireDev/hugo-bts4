@@ -1,0 +1,63 @@
+@import 'code-syntax';
+
+$code-font-color: #06b6ef;
+$code-background-color: #2f1e2e;
+
+// Inline Code
+code {
+  padding: .125rem .125rem;
+  margin: 0 .125rem;
+  color: $code-font-color;
+  background-color: $code-background-color;
+  border-radius: .25rem;
+}
+
+// Code Block Base Formatting
+pre {
+  background-color: $code-background-color;
+  color: $code-font-color;
+  border-left: 5px solid $accent-color;
+  padding: 1.25rem;
+  line-height: 1.015625rem;
+
+  code {
+    padding: 0;
+    margin: 0;
+    font-size: 90%;
+  }
+}
+
+// Line Highlight Override
+.chroma .hl {
+  background-color: #4f424c;
+}
+
+// Table Layout Code Block
+.chroma table.lntable {
+  width: 100%;
+  display: table;
+  margin-bottom: 1rem;
+}
+
+.lntd > pre.chroma {
+  border-left: none;
+  margin: 0;
+  padding: 0.625rem;
+}
+
+.lntable tr:first-child {
+  border-left: 5px solid $accent-color;
+}
+
+.lntable td:first-child {
+  width: 0.625rem;
+
+  .chroma, code, .hl {
+    background-color: $accent-color;
+  }
+
+  pre.chroma {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
